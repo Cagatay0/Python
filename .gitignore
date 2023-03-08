@@ -10,6 +10,8 @@ __pycache__/
 .Python
 build/
 RenameCode/ignoreTest.txt
+FirebaseOperations/note.txt
+FirebaseOperations/firebase_service_account.json
 develop-eggs/
 dist/
 downloads/
