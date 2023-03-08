@@ -9,7 +9,7 @@ __pycache__/
 # Distribution / packaging
 .Python
 build/
-ignoreTest.txt
+RenameCode/ignoreTest.txt
 develop-eggs/
 dist/
 downloads/
