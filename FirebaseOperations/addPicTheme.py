@@ -12,7 +12,7 @@ fdb = firebase_admin.firestore.client()
 
 
 def getDataCol():
-    c = fdb.collection("DMArtStyles").limit(5).get() #just get first 5 data
+    c = fdb.collection("CollectionName").limit(5).get() #just get first 5 data
     # c = fdb.collection("DMArtStyles").get() $get all data
     for a in c:
         d =a.to_dict()
@@ -37,11 +37,11 @@ def readFolderAndUploadFirestore():
 
 def addDataFirestore(index):
     photoUrl = 'YOUR_STORAGE_URL'+index+'.jpg'
-    fdb.collection('picWTheme').add({'photoUrl':photoUrl,'index':int(index)})
+    fdb.collection('collectionName').add({'photoUrl':photoUrl,'index':int(index)})
 
 def uploadStorage(index):
     bucket = storage.bucket()
-    blob= bucket.blob('picWTheme/'+index+'.jpg')
+    blob= bucket.blob('collectionName/'+index+'.jpg')
     path_to_file= '/Users/cagatay/Desktop/beforeUploadStorage/'+index+'.jpg'
     blob.upload_from_filename(path_to_file)
 
